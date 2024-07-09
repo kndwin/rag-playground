@@ -7,15 +7,18 @@ I trained some internal policies documents in order to play around with RAG
 ## Overview
 
 ai: mistral (scored high on METB and was cheapish)
-
 - https://huggingface.co/spaces/mteb/leaderboard
-  vector store: libsql (thought turso would support it for libsql as well but they don't as of now :( ), workaround was i stored them as string (lol) and used numpy to calculate the cosine similarity
+
+vector store: libsql (thought turso would support it for libsql as well but they don't as of now :( ), workaround was i stored them as string (lol) and used numpy to calculate the cosine similarity
 - https://turso.tech/blog/turso-brings-native-vector-search-to-sqlite
-  pdf to markdown generation: pymupdf4llm (pretty fast and mupdf seems to only support this for python)
+
+pdf to markdown generation: pymupdf4llm (pretty fast and mupdf seems to only support this for python)
 - https://pymupdf4llm.readthedocs.io/en/latest/
-  text splitter: Chose level 3 cause the context of these PDF's could fit in a chat and I didn't like any levels lower
+
+text splitter: Chose level 3 cause the context of these PDF's could fit in a chat and I didn't like any levels lower
 - https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/tutorials/LevelsOfTextSplitting/5_Levels_Of_Text_Splitting.ipynb
-  prompt engineering: didn't play around too much but just took the best zero-shot CoT trigger prompt from APE
+
+prompt engineering: didn't play around too much but just took the best zero-shot CoT trigger prompt from APE
 - https://www.promptingguide.ai/techniques/ape
 
 ## Structure
@@ -48,7 +51,7 @@ ai: mistral (scored high on METB and was cheapish)
 
 ## Output example
 
-```sh
+```
 python3 get-answers.py
 ----------------
 QUESTION
